@@ -1,4 +1,4 @@
-module admin_client
+module github.com/ClassFunc/admin_client
 
 go 1.19
 
