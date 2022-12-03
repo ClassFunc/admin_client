@@ -1,4 +1,4 @@
-# Sigleton Firebase Admin Client
+# Singleton Firebase Admin Client
 
 ## Install:
 
