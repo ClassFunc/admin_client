@@ -6,6 +6,7 @@ require (
 	cloud.google.com/go/firestore v1.9.0
 	cloud.google.com/go/storage v1.28.1
 	firebase.google.com/go/v4 v4.10.0
+	github.com/samber/lo v1.37.0
 	google.golang.org/api v0.103.0
 )
 
@@ -24,6 +25,7 @@ require (
 	github.com/googleapis/enterprise-certificate-proxy v0.2.0 // indirect
 	github.com/googleapis/gax-go/v2 v2.7.0 // indirect
 	go.opencensus.io v0.24.0 // indirect
+	golang.org/x/exp v0.0.0-20220303212507-bbda1eaf7a17 // indirect
 	golang.org/x/net v0.3.0 // indirect
 	golang.org/x/oauth2 v0.2.0 // indirect
 	golang.org/x/sync v0.1.0 // indirect
