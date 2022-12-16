@@ -21,6 +21,8 @@ func main() {
     "PROJECT_ID",
     "SERVICE_ACCOUNT_FILE_PATH",
     )
+    // or more simpler
+    admin_client.WithCredentialsFile("SERVICE_ACCOUNT_FILE_PATH")
     
     // then you can use
     admin_client.DB.Collection(...)
