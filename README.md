@@ -44,17 +44,17 @@ func main() {
     admin_client.DocRef("users", "123")
     admin_client.GetDoc("users", "123")
     admin_client.GetDocData("users", "123")
-	admin_client.GetDocDataTo("users", "123", nil)
-
-	// actions with firestore sub_collections
-	admin_client.SubCollRef("users", "123", "roles")
-	admin_client.SubCollGetAllDocs("users", "123", "roles")
-	admin_client.SubCollGetAllDocsData("users", "123", "roles")
-
-	// actions with firestore sub_documents
-	admin_client.SubDocRef("users", "123", "roles", "456")
-	admin_client.GetSubDoc("users", "123", "roles", "456")
-	admin_client.GetSubDocData("users", "123", "roles", "456")
+    admin_client.GetDocDataTo("users", "123", nil)
+    
+    // actions with firestore sub_collections
+    admin_client.SubCollRef("users", "123", "roles")
+    admin_client.SubCollGetAllDocs("users", "123", "roles")
+    admin_client.SubCollGetAllDocsData("users", "123", "roles")
+    
+    // actions with firestore sub_documents
+    admin_client.SubDocRef("users", "123", "roles", "456")
+    admin_client.GetSubDoc("users", "123", "roles", "456")
+    admin_client.GetSubDocData("users", "123", "roles", "456")
 
 	type User struct {
         Name string
