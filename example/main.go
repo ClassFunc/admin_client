@@ -43,4 +43,9 @@ func main() {
 	var adam = new(User)
 	admin_client.GetDocDataTo("users", "123", adam)
 
+	// for collectionGroup
+	// https://firebase.google.com/docs/firestore/query-data/queries?authuser=0&hl=en#collection-group-query
+	admin_client.CollGroupRef("CollId_or_subCollId")
+	admin_client.CollGroupGetAllDocs("CollId_or_subCollId")
+	admin_client.CollGroupGetAllDocsData("CollId_or_subCollId")
 }
