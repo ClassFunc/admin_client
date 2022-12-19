@@ -52,3 +52,28 @@ func CollGetAllDocsData(coll string) ([]map[string]interface{}, error) {
 	})
 	return res, nil
 }
+
+func CollGroupRef(collId string) *firestore.CollectionGroupRef {
+	realCollPath := CollPathFromEnv(collId)
+	return DB.CollectionGroup(realCollPath)
+}
+
+func CollGroupGetAllDocs(collId string) ([]*firestore.DocumentSnapshot, error) {
+	ctx := context.Background()
+	snap, err := CollGroupRef(collId).Documents(ctx).GetAll()
+	if err != nil {
+		return nil, err
+	}
+	return snap, nil
+}
+
+func CollGroupGetAllDocsData(collId string) ([]map[string]interface{}, error) {
+	snap, err := CollGroupGetAllDocs(collId)
+	if err != nil {
+		return nil, err
+	}
+	res := lo.Map(snap, func(doc *firestore.DocumentSnapshot, index int) map[string]interface{} {
+		return common.DocDataWithId(doc)
+	})
+	return res, nil
+}
